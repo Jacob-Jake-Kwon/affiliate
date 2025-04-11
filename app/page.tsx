@@ -25,9 +25,10 @@ const links = [
 export default function Home() {
   const [search, setSearch] = useState('');
 
-  const filteredLinks = links.filter((link) =>
+  const filteredLinks = links.filter((link, index) =>
     link.title.toLowerCase().includes(search.toLowerCase()) ||
-    link.description.toLowerCase().includes(search.toLowerCase())
+    link.description.toLowerCase().includes(search.toLowerCase()) ||
+    search === String(index + 1)
   );
 
   return (
@@ -40,7 +41,7 @@ export default function Home() {
       <div className="relative">
         <input
           type="text"
-          placeholder="추천 항목 검색하기..."
+          placeholder="추천 번호나 제목으로 검색..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full border rounded-full px-10 py-2 text-sm shadow focus:outline-none focus:ring-2 focus:ring-blue-300"
