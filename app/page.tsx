@@ -17,7 +17,7 @@ const links = [
     id: 2,
     title: 'YES24 - 요즘 읽고 있는 책',
     description: '생각이 깊어지는 인문학 책이에요.',
-    url: 'https://www.yes24.com/product/book',
+    url: 'https://www.youtube.com/channel/UCZYUWw6DO_GjReQ4LOSD9cg',
     image: '/book.jpg',
   },
 ];
