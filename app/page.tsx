@@ -72,8 +72,8 @@ export default function Home() {
     <main className="max-w-xl mx-auto p-4 space-y-6">
       <div className="flex justify-between items-center">
         <div className="space-y-1">
-          <h1 className="text-2xl font-semibold">📌 Jake의 추천 리스트</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">진짜 써보고 괜찮았던 것만 모았어요</p>
+          <h1 className="text-2xl font-semibold">📌 연예인들의 꿀템 리스트</h1>
+          <p className="text-sm text-gray-500 dark:text-gray-400">🤫연예인들이 추천해준 찐 꿀템들만 모았어요</p>
         </div>
         <button onClick={toggleTheme} className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800">
           {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
