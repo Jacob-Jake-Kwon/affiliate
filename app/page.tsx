@@ -48,12 +48,15 @@ export default function Home() {
         <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
       </div>
 
-      {filteredLinks.map((link) => (
+      {filteredLinks.map((link, index) => (
         <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99]">
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 transition">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
             <CardContent className="space-y-2 py-4">
-              <h2 className="text-lg font-medium">{link.title}</h2>
+              <div className="flex items-center space-x-2">
+                <span className="text-sm font-bold text-blue-500">#{index + 1}</span>
+                <h2 className="text-lg font-medium">{link.title}</h2>
+              </div>
               <p className="text-sm text-gray-600">{link.description}</p>
               <Button asChild>
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
