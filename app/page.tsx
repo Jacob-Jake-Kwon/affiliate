@@ -10,6 +10,7 @@ const links = [
     id: 1,
     title: '쿠팡 - 내가 실제로 산 전동칫솔',
     description: '3개월째 쓰는 중인데 너무 만족스러워요. 강추!',
+    category: '전자기기',
     url: 'https://link.coupang.com/recommend/toothbrush',
     image: '/toothbrush.jpg',
   },
@@ -17,20 +18,27 @@ const links = [
     id: 2,
     title: 'YES24 - 요즘 읽고 있는 책',
     description: '생각이 깊어지는 인문학 책이에요.',
-    url: 'https://www.youtube.com/channel/UCZYUWw6DO_GjReQ4LOSD9cg',
+    category: '책',
+    url: 'https://www.yes24.com/product/book',
     image: '/book.jpg',
   },
 ];
 
+const categories = ['전체', '전자기기', '책'];
+
 export default function Home() {
   const [search, setSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('전체');
 
   const filteredLinks = links
     .map((link, i) => ({ ...link, originalIndex: i }))
     .filter((link) =>
-      link.title.toLowerCase().includes(search.toLowerCase()) ||
-      link.description.toLowerCase().includes(search.toLowerCase()) ||
-      search === String(link.originalIndex + 1)
+      (selectedCategory === '전체' || link.category === selectedCategory) &&
+      (
+        link.title.toLowerCase().includes(search.toLowerCase()) ||
+        link.description.toLowerCase().includes(search.toLowerCase()) ||
+        search === String(link.originalIndex + 1)
+      )
     );
 
   return (
@@ -49,6 +57,22 @@ export default function Home() {
           className="w-full border rounded-full px-10 py-2 text-sm shadow focus:outline-none focus:ring-2 focus:ring-blue-300"
         />
         <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+      </div>
+
+      <div className="flex justify-center space-x-2">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setSelectedCategory(cat)}
+            className={`px-4 py-1 rounded-full text-sm border ${
+              selectedCategory === cat
+                ? 'bg-blue-500 text-white border-blue-500'
+                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
       {filteredLinks.map((link) => (
