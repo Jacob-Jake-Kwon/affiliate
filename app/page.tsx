@@ -1,7 +1,7 @@
 "use client";
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Search, Sun, Moon } from "lucide-react";
+import { Search, Sun, Moon, Copy } from "lucide-react";
 import { Card, CardContent } from './components/ui/card';
 import { Button } from './components/ui/button';
 
@@ -30,12 +30,19 @@ export default function Home() {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('전체');
   const [theme, setTheme] = useState('light');
+  const [clickCounts, setClickCounts] = useState({});
+  const [copiedLinkId, setCopiedLinkId] = useState<number | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');
     if (saved === 'dark') {
       document.documentElement.classList.add('dark');
       setTheme('dark');
+    }
+
+    const storedCounts = localStorage.getItem('clickCounts');
+    if (storedCounts) {
+      setClickCounts(JSON.parse(storedCounts));
     }
   }, []);
 
@@ -44,6 +51,18 @@ export default function Home() {
     document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', newTheme);
     setTheme(newTheme);
+  };
+
+  const handleClick = (id: number) => {
+    const newCounts = { ...clickCounts, [id]: (clickCounts[id] || 0) + 1 };
+    setClickCounts(newCounts);
+    localStorage.setItem('clickCounts', JSON.stringify(newCounts));
+  };
+
+  const handleCopy = async (id: number, url: string) => {
+    await navigator.clipboard.writeText(url);
+    setCopiedLinkId(id);
+    setTimeout(() => setCopiedLinkId(null), 1500);
   };
 
   const filteredLinks = links
@@ -106,11 +125,29 @@ export default function Home() {
                 <h2 className="text-lg font-medium">{link.title}</h2>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">{link.description}</p>
-              <Button asChild>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  링크 보기
-                </a>
-              </Button>
+
+              <div className="flex gap-2 items-center">
+                <Button asChild>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleClick(link.id)}
+                  >
+                    링크 보기
+                  </a>
+                </Button>
+                <button
+                  onClick={() => handleCopy(link.id, link.url)}
+                  className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  {copiedLinkId === link.id ? "복사됨!" : <Copy size={14} />}
+                </button>
+              </div>
+
+              <p className="text-xs text-gray-400 mt-1">
+                👁️ {clickCounts[link.id] || 0}회 클릭됨
+              </p>
             </CardContent>
           </Card>
         </div>
