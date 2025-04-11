@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
-import { motion } from "framer-motion";
 
 const links = [
   {
@@ -25,11 +24,7 @@ export default function Home() {
     <main className="max-w-xl mx-auto p-4 space-y-6">
       <h1 className="text-2xl font-semibold">🧑‍💻 OOO의 추천 리스트</h1>
       {links.map((link) => (
-        <motion.div
-          key={link.id}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
+        <div key={link.id} className="transition hover:scale-[1.02] active:scale-[0.98]">
           <Card className="overflow-hidden">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
             <CardContent className="space-y-2 py-4">
@@ -42,7 +37,7 @@ export default function Home() {
               </Button>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
       ))}
     </main>
   );
