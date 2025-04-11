@@ -24,7 +24,7 @@ const links = [
   }
 ];
 
-const categories = ['전체', '운동용품'];
+const categories = ['전체', '운동용품', '관리용품'];
 
 export default function Home() {
   const [search, setSearch] = useState('');
