@@ -7,6 +7,14 @@ import { Button } from './components/ui/button';
 
 const links = [
   {
+    id: 3,
+    title: '룰루레몬 폼롤러 더블롤러',
+    description: '안소희가 사용한 폼롤러',
+    category: '운동용품',
+    url: 'https://link.coupang.com/a/cn604A',
+    image: '/lululemon.jpg',
+  },
+  {
     id: 1,
     title: '쿠팡 - 내가 실제로 산 전동칫솔',
     description: '3개월째 쓰는 중인데 너무 만족스러워요. 강추!',
@@ -24,7 +32,7 @@ const links = [
   },
 ];
 
-const categories = ['전체', '전자기기', '책'];
+const categories = ['전체', '전자기기', '책', '운동용품'];
 
 export default function Home() {
   const [search, setSearch] = useState('');
