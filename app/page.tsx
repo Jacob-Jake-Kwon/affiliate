@@ -13,23 +13,7 @@ const links = [
     category: '운동용품',
     url: 'https://link.coupang.com/a/cn604A',
     image: '/lululemon.jpg',
-  },
-  {
-    id: 1,
-    title: '쿠팡 - 내가 실제로 산 전동칫솔',
-    description: '3개월째 쓰는 중인데 너무 만족스러워요. 강추!',
-    category: '전자기기',
-    url: 'https://link.coupang.com/recommend/toothbrush',
-    image: '/toothbrush.jpg',
-  },
-  {
-    id: 2,
-    title: 'YES24 - 요즘 읽고 있는 책',
-    description: '생각이 깊어지는 인문학 책이에요.',
-    category: '책',
-    url: 'https://www.yes24.com/product/book',
-    image: '/book.jpg',
-  },
+  }
 ];
 
 const categories = ['전체', '운동용품'];
