@@ -72,8 +72,8 @@ export default function Home() {
     <main className="max-w-xl mx-auto p-4 space-y-6">
       <div className="flex justify-between items-center">
         <div className="space-y-1">
-          <h1 className="text-2xl font-semibold">📌 연예인들의 꿀템 리스트</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">🤫연예인들이 추천해준 찐 꿀템들만 모았어요</p>
+          <h1 className="text-2xl font-semibold">📌 Jake의 추천 리스트</h1>
+          <p className="text-sm text-gray-500 dark:text-gray-400">진짜 써보고 괜찮았던 것만 모았어요</p>
         </div>
         <button onClick={toggleTheme} className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800">
           {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
@@ -110,7 +110,7 @@ export default function Home() {
       {filteredLinks.map((link) => (
         <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99]">
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-gray-800 transition">
-            <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
+            <img src={link.image} alt={link.title} className="w-full h-56 object-cover" />
             <CardContent className="space-y-2 py-4">
               <div className="flex items-center space-x-2">
                 <span className="text-sm font-bold text-blue-500">#{link.originalIndex + 1}</span>
