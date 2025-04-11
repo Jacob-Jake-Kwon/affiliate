@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { ReactNode } from 'react';
 
-export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function Card({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`border rounded-xl shadow-sm bg-white ${className}`}>
+    <div className={`border rounded-xl bg-white ${className}`}>
       {children}
     </div>
   );
 }
 
-export function CardContent({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function CardContent({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return <div className={`p-4 ${className}`}>{children}</div>;
 }
