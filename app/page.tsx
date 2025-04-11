@@ -25,11 +25,13 @@ const links = [
 export default function Home() {
   const [search, setSearch] = useState('');
 
-  const filteredLinks = links.filter((link, index) =>
-    link.title.toLowerCase().includes(search.toLowerCase()) ||
-    link.description.toLowerCase().includes(search.toLowerCase()) ||
-    search === String(index + 1)
-  );
+  const filteredLinks = links
+    .map((link, i) => ({ ...link, originalIndex: i }))
+    .filter((link) =>
+      link.title.toLowerCase().includes(search.toLowerCase()) ||
+      link.description.toLowerCase().includes(search.toLowerCase()) ||
+      search === String(link.originalIndex + 1)
+    );
 
   return (
     <main className="max-w-xl mx-auto p-4 space-y-6">
@@ -49,13 +51,13 @@ export default function Home() {
         <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
       </div>
 
-      {filteredLinks.map((link, index) => (
+      {filteredLinks.map((link) => (
         <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99]">
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 transition">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
             <CardContent className="space-y-2 py-4">
               <div className="flex items-center space-x-2">
-                <span className="text-sm font-bold text-blue-500">#{index + 1}</span>
+                <span className="text-sm font-bold text-blue-500">#{link.originalIndex + 1}</span>
                 <h2 className="text-lg font-medium">{link.title}</h2>
               </div>
               <p className="text-sm text-gray-600">{link.description}</p>
