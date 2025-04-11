@@ -165,23 +165,8 @@ export default function Home() {
         <p className="text-sm text-gray-500 text-center mt-4 dark:text-gray-400">검색 결과가 없어요.</p>
       )}
     
-      <div className="text-xs text-gray-400 dark:text-gray-500 mt-10 border-t pt-4 border-gray-200 dark:border-gray-700 space-y-2">
-        <p className="font-semibold">*활동 시 주의 사항</p>
-        <ol className="list-decimal list-inside space-y-1">
-          <li>
-            게시글 작성 시, 아래 문구를 반드시 기재해 주세요.<br />
-            <span className="text-[13px] text-blue-500">"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."</span>
-          </li>
-          <li>
-            쿠팡 파트너스의 활동은 공정거래위원회의 심사지침에 따라 추천, 보증인인 파트너스 회원과 당사의 경제적 이해관계에 대하여 공개하여야 합니다.
-            자세한 내용은 "도움말 &gt; 자주묻는질문 &gt; 이용문의 &gt; 광고 삽입 시 대가성 문구를 써야하나요?"를 참고해 주세요.
-          </li>
-          <li>
-            바로가기 아이콘 이용 시, 수신자의 사전 동의를 얻지 않은 메신저, SNS 등으로 메시지를 발송하는 행위는
-            불법 스팸 전송 행위로 간주되어 규제기관의 행정제재(3천만원 이하의 과태료) 또는 형사 처벌
-            (1년 이하의 징역 또는 1천만원 이하의 벌금)의 대상이 될 수 있으니 이 점 유의하시기 바랍니다.
-          </li>
-        </ol>
+      <div className="text-xs text-gray-400 dark:text-gray-500 mt-10 border-t pt-4 border-gray-200 dark:border-gray-700">
+        <p>"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."</p>
       </div>
     </main>
 
