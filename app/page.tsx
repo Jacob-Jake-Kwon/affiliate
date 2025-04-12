@@ -14,44 +14,43 @@ const links = [
     url: "https://link.coupang.com/a/cn604A",
     image: "/lululemon.jpg",
   },
-  {
+   {
     id: 2,
-    title: "브이라인 마사지기 관리밴드",
-    description: "레드벨벳 조이가 사용한 브이라인 마사지기",
-    category: "관리용품",
-    url: "https://link.coupang.com/a/cn7FgH",
-    image: "/joy_ems.jpg",
-    shortsUrl: "https://youtube.com/shorts/Xg_DqQWZuac?feature=share",
+    title: '브이라인 마사지기 관리밴드',
+    description: '레드벨벳 조이가 사용한 브이라인 마사지기',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/cn7FgH',
+    image: '/joy_ems.jpg',
   },
   {
     id: 3,
-    title: "셀룰라 다이어트 자동롤러 마사지기",
-    description: "레드벨벳 조이가 사용한 자동롤러 마사지기",
-    category: "관리용품",
-    url: "https://link.coupang.com/a/codmbh",
-    image: "/roller.jpg",
-    shortsUrl: "https://youtube.com/shorts/teCnIfbeJHI?feature=share",
+    title: '셀룰라 다이어트 자동롤러 마사지기',
+    description: '레드벨벳 조이가 사용한 자동롤러 마사지기',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/codmbh',
+    image: '/roller.jpg',
   },
+  
   {
     id: 4,
-    title: "Norda 노다 002 여성 신더",
-    description: "레드벨벳 슬기의 등산화",
-    category: "운동용품",
-    url: "https://link.coupang.com/a/coddTa",
-    image: "/seulgi.jpg",
+    title: 'Norda 노다 002 여성 신더',
+    description: '레드벨벳 슬기의 등산화',
+    category: '운동용품',
+    url: 'https://link.coupang.com/a/coddTa',
+    image: '/seulgi.jpg',
   },
   {
     id: 5,
-    title: "진해양봉 생로얄제리",
-    description: "하지원이 먹은 건강관리 템",
-    category: "건강관리",
-    url: "https://link.coupang.com/a/cob3Zs",
-    image: "/hajiwon.jpg",
-    shortsUrl: "https://youtube.com/shorts/ixJv8Lm_IkE?feature=share",
+    title: '진해양봉 생로얄제리',
+    description: '하지원이 먹은 건강관리 템',
+    category: '건강관리',
+    url: 'https://link.coupang.com/a/cob3Zs',
+    image: '/hajiwon.jpg',
   },
+  
 ];
 
-const categories = ["전체", "운동용품", "관리용품", "건강관리"];
+const categories = ["전체", "운동용품", '관리용품', '건강관리'];
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -143,7 +142,7 @@ export default function Home() {
       </div>
 
       {filteredLinks.map((link) => (
-        <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99]">
+        <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99] mb-6">
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-gray-800 transition">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
             <CardContent className="space-y-2 py-4">
@@ -155,24 +154,16 @@ export default function Home() {
               <p className="text-xs text-gray-400 dark:text-gray-500">
                 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
               </p>
-              <div className="flex flex-wrap gap-2 items-center">
+              <div className="flex gap-2 items-center">
                 <Button asChild>
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     링크 보기
                   </a>
                 </Button>
-
-                {link.shortsUrl && (
-                  <a
-                    href={link.shortsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    쇼츠 보기
-                  </a>
-                )}
-
                 <button
                   onClick={() => handleCopy(link.id, link.url)}
                   className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -190,7 +181,7 @@ export default function Home() {
       )}
 
       <div className="text-center text-xs text-gray-400 dark:text-gray-500 mt-10">
-        {/*오늘의 방문자 수: {visitCount}*/}
+        {/*오늘도 {visitCount}명이 꿀템 구경 왔어요!*/}
       </div>
     </main>
   );
