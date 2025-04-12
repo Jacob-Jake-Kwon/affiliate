@@ -29,7 +29,16 @@ const links = [
     category: '건강용품',
     url: 'https://link.coupang.com/a/cob3Zs',
     image: '/hajiwon.jpg',
+  },
+  {
+    id: 4,
+    title: 'Norda 노다 002 여성 신더',
+    description: '레드벨벳 슬기의 등산화',
+    category: '운동용품',
+    url: 'https://link.coupang.com/a/coddTa',
+    image: '/seulgi.jpg',
   }
+  
 ];
 
 const categories = ["전체", "운동용품", '관리용품', '건강용품'];
