@@ -1,0 +1,27 @@
+[
+  {
+    "rank": 29,
+    "name": "조세호 아쿠아 향수",
+    "image": "/seho.jpg"
+  },
+  {
+    "rank": 28,
+    "name": "최은경 뉴발 운동화",
+    "image": "/newbal.jpg"
+  },
+  {
+    "rank": 27,
+    "name": "한가인 샴푸대",
+    "image": "/shampoo.jpg"
+  },
+  {
+    "rank": 26,
+    "name": "최화정 거북이주스",
+    "image": "/juice.jpg"
+  },
+  {
+    "rank": 25,
+    "name": "최화정 땅콩잼",
+    "image": "/peanut.jpg"
+  }
+]
