@@ -13,6 +13,7 @@ const links = [
     category: "운동용품",
     url: "https://link.coupang.com/a/cn604A",
     image: "/lululemon.jpg",
+    
   },
    {
     id: 2,
@@ -21,6 +22,7 @@ const links = [
     category: '관리용품',
     url: 'https://link.coupang.com/a/cn7FgH',
     image: '/joy_ems.jpg',
+    shortsUrl: 'https://youtube.com/shorts/Xg_DqQWZuac?feature=share',
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const links = [
     category: '관리용품',
     url: 'https://link.coupang.com/a/codmbh',
     image: '/roller.jpg',
+    shortsUrl: 'https://youtube.com/shorts/teCnIfbeJHI?feature=share',
   },
   
   {
@@ -46,6 +49,8 @@ const links = [
     category: '건강관리',
     url: 'https://link.coupang.com/a/cob3Zs',
     image: '/hajiwon.jpg',
+    shortsUrl: 'https://youtube.com/shorts/ixJv8Lm_IkE?feature=share',
+    
   },
   
 ];
@@ -163,6 +168,15 @@ export default function Home() {
                   >
                     링크 보기
                   </a>
+                  <a
+                      href={link.shortsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      쇼츠 보기
+                    </a>
+
                 </Button>
                 <button
                   onClick={() => handleCopy(link.id, link.url)}
