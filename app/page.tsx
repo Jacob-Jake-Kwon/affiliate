@@ -21,10 +21,18 @@ const links = [
     category: '관리용품',
     url: 'https://link.coupang.com/a/cn7FgH',
     image: '/joy_ems.jpg',
+  },
+  {
+    id: 3,
+    title: '진해양봉 생로얄제리',
+    description: '하지원이 먹은 건강관리 템',
+    category: '건강용품',
+    url: 'https://link.coupang.com/a/cob3Zs',
+    image: '/hajiwon.jpg',
   }
 ];
 
-const categories = ["전체", "운동용품", '관리용품'];
+const categories = ["전체", "운동용품", '관리용품', '건강용품'];
 
 export default function Home() {
   const [search, setSearch] = useState("");
