@@ -13,49 +13,45 @@ const links = [
     category: "운동용품",
     url: "https://link.coupang.com/a/cn604A",
     image: "/lululemon.jpg",
-    
   },
-   {
+  {
     id: 2,
-    title: '브이라인 마사지기 관리밴드',
-    description: '레드벨벳 조이가 사용한 브이라인 마사지기',
-    category: '관리용품',
-    url: 'https://link.coupang.com/a/cn7FgH',
-    image: '/joy_ems.jpg',
-    shortsUrl: 'https://youtube.com/shorts/Xg_DqQWZuac?feature=share',
+    title: "브이라인 마사지기 관리밴드",
+    description: "레드벨벳 조이가 사용한 브이라인 마사지기",
+    category: "관리용품",
+    url: "https://link.coupang.com/a/cn7FgH",
+    image: "/joy_ems.jpg",
+    shortsUrl: "https://youtube.com/shorts/Xg_DqQWZuac?feature=share",
   },
   {
     id: 3,
-    title: '셀룰라 다이어트 자동롤러 마사지기',
-    description: '레드벨벳 조이가 사용한 자동롤러 마사지기',
-    category: '관리용품',
-    url: 'https://link.coupang.com/a/codmbh',
-    image: '/roller.jpg',
-    shortsUrl: 'https://youtube.com/shorts/teCnIfbeJHI?feature=share',
+    title: "셀룰라 다이어트 자동롤러 마사지기",
+    description: "레드벨벳 조이가 사용한 자동롤러 마사지기",
+    category: "관리용품",
+    url: "https://link.coupang.com/a/codmbh",
+    image: "/roller.jpg",
+    shortsUrl: "https://youtube.com/shorts/teCnIfbeJHI?feature=share",
   },
-  
   {
     id: 4,
-    title: 'Norda 노다 002 여성 신더',
-    description: '레드벨벳 슬기의 등산화',
-    category: '운동용품',
-    url: 'https://link.coupang.com/a/coddTa',
-    image: '/seulgi.jpg',
+    title: "Norda 노다 002 여성 신더",
+    description: "레드벨벳 슬기의 등산화",
+    category: "운동용품",
+    url: "https://link.coupang.com/a/coddTa",
+    image: "/seulgi.jpg",
   },
   {
     id: 5,
-    title: '진해양봉 생로얄제리',
-    description: '하지원이 먹은 건강관리 템',
-    category: '건강관리',
-    url: 'https://link.coupang.com/a/cob3Zs',
-    image: '/hajiwon.jpg',
-    shortsUrl: 'https://youtube.com/shorts/ixJv8Lm_IkE?feature=share',
-    
+    title: "진해양봉 생로얄제리",
+    description: "하지원이 먹은 건강관리 템",
+    category: "건강관리",
+    url: "https://link.coupang.com/a/cob3Zs",
+    image: "/hajiwon.jpg",
+    shortsUrl: "https://youtube.com/shorts/ixJv8Lm_IkE?feature=share",
   },
-  
 ];
 
-const categories = ["전체", "운동용품", '관리용품', '건강관리'];
+const categories = ["전체", "운동용품", "관리용품", "건강관리"];
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -151,37 +147,39 @@ export default function Home() {
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-gray-800 transition">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
             <CardContent className="space-y-2 py-4">
-             <div className="flex flex-wrap gap-2 items-center">
-  <Button asChild>
-    <a
-      href={link.url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      링크 보기
-    </a>
-  </Button>
+              <div className="flex items-center space-x-2">
+                <span className="text-sm font-bold text-blue-500">#{link.originalIndex + 1}</span>
+                <h2 className="text-lg font-medium">{link.title}</h2>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{link.description}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500">
+                이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+              </p>
+              <div className="flex flex-wrap gap-2 items-center">
+                <Button asChild>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    링크 보기
+                  </a>
+                </Button>
 
-  {link.shortsUrl && (
-    <Button variant="outline" asChild>
-      <a
-        href={link.shortsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        쇼츠 보기
-      </a>
-    </Button>
-  )}
+                {link.shortsUrl && (
+                  <a
+                    href={link.shortsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    쇼츠 보기
+                  </a>
+                )}
 
-  <button
-    onClick={() => handleCopy(link.id, link.url)}
-    className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
-  >
-    {copiedLinkId === link.id ? "복사됨!" : <Copy size={14} />}
-  </button>
-</div>
-
+                <button
+                  onClick={() => handleCopy(link.id, link.url)}
+                  className="text-sm px-3 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  {copiedLinkId === link.id ? "복사됨!" : <Copy size={14} />}
+                </button>
+              </div>
             </CardContent>
           </Card>
         </div>
