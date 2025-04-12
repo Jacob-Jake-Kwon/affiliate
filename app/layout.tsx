@@ -9,6 +9,18 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" suppressHydrationWarning>
+      <head>
+        {/* ✅ Google Analytics 삽입 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LEV1VJQM1"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3LEV1VJQM1');
+          `
+        }} />
+      </head>
       <body className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
         {children}
       </body>
