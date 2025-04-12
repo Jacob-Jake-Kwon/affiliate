@@ -58,6 +58,7 @@ export default function Home() {
   const [theme, setTheme] = useState("light");
   const [copiedLinkId, setCopiedLinkId] = useState<number | null>(null);
   const [visitCount, setVisitCount] = useState(0);
+  const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
@@ -141,8 +142,27 @@ export default function Home() {
         ))}
       </div>
 
-      {filteredLinks.map((link) => (
-        <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99] mb-6">
+      <div className="flex justify-end mb-2">
+        <button
+          onClick={() => setIsCompact(!isCompact)}
+          className="text-sm text-blue-500 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+        >
+          {isCompact ? "카드 뷰로 보기" : "컴팩트 뷰로 보기"}
+        </button>
+      </div>
+
+      {isCompact ? (
+        <ul className="space-y-2">
+          {filteredLinks.map((link) => (
+            <li key={link.id}>
+              <a href={link.url} target="_blank" rel="noopener noreferrer" className="block p-3 border rounded hover:bg-gray-50 dark:hover:bg-gray-800">
+                #{link.originalIndex + 1}. {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99]">
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-gray-800 transition">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
             <CardContent className="space-y-2 py-4">
@@ -175,13 +195,14 @@ export default function Home() {
           </Card>
         </div>
       ))}
+      )
 
       {filteredLinks.length === 0 && (
         <p className="text-sm text-gray-500 text-center mt-4 dark:text-gray-400">검색 결과가 없어요.</p>
       )}
 
       <div className="text-center text-xs text-gray-400 dark:text-gray-500 mt-10">
-        {/*오늘도 {visitCount}명이 꿀템 구경 왔어요!*/}
+        {/*오늘의 방문자 수: {visitCount}*/}
       </div>
     </main>
   );
