@@ -155,13 +155,16 @@ export default function Home() {
         <ul className="space-y-2">
           {filteredLinks.map((link) => (
             <li key={link.id}>
-              <a href={link.url} target="_blank" rel="noopener noreferrer" className="block p-3 border rounded hover:bg-gray-50 dark:hover:bg-gray-800">
+              <a href={link.url} target="_blank" rel="noopener noreferrer"
+                 className="block p-3 border rounded hover:bg-gray-100 dark:hover:bg-gray-700">
                 #{link.originalIndex + 1}. {link.title}
               </a>
             </li>
           ))}
         </ul>
       ) : (
+        <>
+
         <div key={link.id} className="transition hover:scale-[1.01] active:scale-[0.99]">
           <Card className="overflow-hidden rounded-xl shadow-lg hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-gray-800 transition">
             <img src={link.image} alt={link.title} className="w-full h-40 object-cover" />
@@ -195,7 +198,6 @@ export default function Home() {
           </Card>
         </div>
       ))}
-      )
 
       {filteredLinks.length === 0 && (
         <p className="text-sm text-gray-500 text-center mt-4 dark:text-gray-400">검색 결과가 없어요.</p>
