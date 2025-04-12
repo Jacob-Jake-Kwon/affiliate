@@ -102,7 +102,6 @@ export default function Home() {
           link.description.toLowerCase().includes(search.toLowerCase()) ||
           search === String(link.originalIndex + 1))
   );
-    );
 
   return (
     <main className="max-w-xl mx-auto p-4 space-y-6">
