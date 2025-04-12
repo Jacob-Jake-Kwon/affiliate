@@ -17,7 +17,7 @@ const links = [
    {
     id: 2,
     title: '브이라인 마사지기 관리밴드',
-    description: '조이가 사용한 브이라인 마사지기',
+    description: '레드벨벳 조이가 사용한 브이라인 마사지기',
     category: '관리용품',
     url: 'https://link.coupang.com/a/cn7FgH',
     image: '/joy_ems.jpg',
