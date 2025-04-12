@@ -26,7 +26,7 @@ const links = [
     id: 3,
     title: '셀룰라 다이어트 자동롤러 마사지기',
     description: '레드벨벳 조이가 사용한 자동롤러 마사지기',
-    category: '운동용품',
+    category: '관리용품',
     url: 'https://link.coupang.com/a/codmbh',
     image: '/roller.jpg',
   },
