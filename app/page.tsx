@@ -24,12 +24,13 @@ const links = [
   },
   {
     id: 3,
-    title: '진해양봉 생로얄제리',
-    description: '하지원이 먹은 건강관리 템',
-    category: '건강용품',
-    url: 'https://link.coupang.com/a/cob3Zs',
-    image: '/hajiwon.jpg',
+    title: '셀룰라 다이어트 자동롤러 마사지기',
+    description: '레드벨벳 조이가 사용한 자동롤러 마사지기',
+    category: '운동용품',
+    url: 'https://link.coupang.com/a/codmbh',
+    image: '/roller.jpg',
   },
+  
   {
     id: 4,
     title: 'Norda 노다 002 여성 신더',
@@ -37,7 +38,15 @@ const links = [
     category: '운동용품',
     url: 'https://link.coupang.com/a/coddTa',
     image: '/seulgi.jpg',
-  }
+  },
+  {
+    id: 5,
+    title: '진해양봉 생로얄제리',
+    description: '하지원이 먹은 건강관리 템',
+    category: '건강용품',
+    url: 'https://link.coupang.com/a/cob3Zs',
+    image: '/hajiwon.jpg',
+  },
   
 ];
 
