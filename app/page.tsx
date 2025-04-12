@@ -161,7 +161,7 @@ export default function Home() {
       )}
 
       <div className="text-center text-xs text-gray-400 dark:text-gray-500 mt-10">
-        오늘의 방문자 수: {visitCount}
+        {/*오늘의 방문자 수: {visitCount}*/}
       </div>
     </main>
   );
