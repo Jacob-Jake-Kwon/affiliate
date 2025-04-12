@@ -26,6 +26,24 @@ const links = [
 
 const categories = ['전체', '운동용품', '관리용품'];
 
+
+  const [visitCount, setVisitCount] = useState(0);
+
+  useEffect(() => {
+    const today = new Date().toISOString().split('T')[0];
+    const visitKey = `visit-${today}`;
+    const visited = localStorage.getItem(visitKey);
+    if (!visited) {
+      const count = Number(localStorage.getItem("visit-count") || "0") + 1;
+      localStorage.setItem("visit-count", count.toString());
+      localStorage.setItem(visitKey, "true");
+      setVisitCount(count);
+    } else {
+      setVisitCount(Number(localStorage.getItem("visit-count")));
+    }
+  }, []);
+
+
 export default function Home() {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('전체');
@@ -81,7 +99,7 @@ export default function Home() {
       <div className="flex justify-between items-center">
         <div className="space-y-1">
           <h1 className="text-2xl font-semibold">📌 연예인들의 꿀템 리스트</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">🤫연예인들의 추천템들만 모았어요</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">🤫연예인들의 추천템들만 모았어요</p>*/
         </div>
         <button onClick={toggleTheme} className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800">
           {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
@@ -124,7 +142,7 @@ export default function Home() {
                 <span className="text-sm font-bold text-blue-500">#{link.originalIndex + 1}</span>
                 <h2 className="text-lg font-medium">{link.title}</h2>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300">{link.description}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{link.description}</p>*/
 
               <div className="flex gap-2 items-center">
                 <Button asChild>
@@ -145,22 +163,28 @@ export default function Home() {
                 </button>
               </div>
 
-              <p className="text-xs text-gray-400 mt-1">
+              // 방문자 수 표시로 대체됨
+{/*
                 👁️ {clickCounts[link.id] || 0}회 클릭됨
-              </p>
+              </p>*/
             </CardContent>
           </Card>
         </div>
       ))}
 
       {filteredLinks.length === 0 && (
-        <p className="text-sm text-gray-500 text-center mt-4 dark:text-gray-400">검색 결과가 없어요.</p>
+        <p className="text-sm text-gray-500 text-center mt-4 dark:text-gray-400">검색 결과가 없어요.</p>*/
       )}
     
       <div className="text-xs text-gray-400 dark:text-gray-500 mt-10 border-t pt-4 border-gray-200 dark:border-gray-700">
-        <p>"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."</p>
+        <p>"이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."</p>*/
+      </div>
+    
+      <div className="text-center text-xs text-gray-400 dark:text-gray-500 mt-10">
+        오늘의 방문자 수: {visitCount}
       </div>
     </main>
+
 
   );
 }
