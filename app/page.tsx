@@ -30,9 +30,18 @@ const links = [
     url: 'https://link.coupang.com/a/codmbh',
     image: '/roller.jpg',
   },
-  
   {
     id: 4,
+    title: '이지스탭 프리미엄 자동소화 멀티탭 4구 2종',
+    description: '오연수 손지창 부부의 홈인테리어템',
+    category: '홈인테리어',
+    url: 'https://link.coupang.com/a/cowh5n',
+    image: '/multitab.jpg',
+  },
+  
+  
+  {
+    id: 5,
     title: 'Norda 노다 002 여성 신더',
     description: '레드벨벳 슬기의 등산화',
     category: '운동용품',
@@ -40,17 +49,18 @@ const links = [
     image: '/seulgi.jpg',
   },
   {
-    id: 5,
+    id: 6,
     title: '진해양봉 생로얄제리',
     description: '하지원이 먹은 건강관리 템',
     category: '건강관리',
     url: 'https://link.coupang.com/a/cob3Zs',
     image: '/hajiwon.jpg',
   },
+
   
 ];
 
-const categories = ["전체", "운동용품", '관리용품', '건강관리'];
+const categories = ["전체", "운동용품", '관리용품', '건강관리', '홈인테리어'];
 
 export default function Home() {
   const [search, setSearch] = useState("");
