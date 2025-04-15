@@ -50,12 +50,22 @@ const links = [
   },
   {
     id: 6,
+    title: '코이세이오 pomponne 038 solid perfume',
+    description: '슬기의 고체향수 선물 추천 템',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/coDiK6',
+    image: '/seulgi_perfume.jpg',
+  },
+  {
+    id: 7,
     title: '진해양봉 생로얄제리',
     description: '하지원이 먹은 건강관리 템',
     category: '건강관리',
     url: 'https://link.coupang.com/a/cob3Zs',
     image: '/hajiwon.jpg',
   },
+
+  
 
   
 ];
