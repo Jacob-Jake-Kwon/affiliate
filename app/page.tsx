@@ -75,7 +75,7 @@ export default function Home() {
   const [theme, setTheme] = useState("light");
   const [copiedLinkId, setCopiedLinkId] = useState<number | null>(null);
   const [visitCount, setVisitCount] = useState(0);
-  const [isListView, setIsListView] = useState(false);
+  const [isListView, setIsListView] = useState(true);
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
