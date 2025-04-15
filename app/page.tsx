@@ -1,4 +1,5 @@
 "use client";
+
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Search, Sun, Moon, Copy } from "lucide-react";
@@ -14,7 +15,7 @@ const links = [
     url: "https://link.coupang.com/a/cn604A",
     image: "/lululemon.jpg",
   },
-   {
+  {
     id: 2,
     title: '브이라인 마사지기 관리밴드',
     description: '레드벨벳 조이가 사용한 브이라인 마사지기',
@@ -38,8 +39,6 @@ const links = [
     url: 'https://link.coupang.com/a/cowh5n',
     image: '/multitab.jpg',
   },
-  
-  
   {
     id: 5,
     title: 'Norda 노다 002 여성 신더',
@@ -64,10 +63,6 @@ const links = [
     url: 'https://link.coupang.com/a/cob3Zs',
     image: '/hajiwon.jpg',
   },
-
-  
-
-  
 ];
 
 const categories = ["전체", "운동용품", '관리용품', '건강관리', '홈인테리어'];
@@ -112,7 +107,6 @@ export default function Home() {
     setTimeout(() => setCopiedLinkId(null), 1500);
   };
 
-  
   const filteredLinks = links
     .map((link, i) => ({ ...link, originalIndex: i }))
     .filter((link) =>
@@ -121,8 +115,9 @@ export default function Home() {
         link.description.toLowerCase().includes(search.toLowerCase()) ||
         search === String(link.originalIndex + 1))
     );
-return (
-    <main className="max-w-xl mx-auto p-4 space-y-6">
+
+  return (
+    <main className="max-w-xl mx-auto p-4 space-y-6 pb-28">
       <div className="flex justify-between items-center">
         <div className="space-y-1">
           <h1 className="text-2xl font-semibold">📌 연예인들의 꿀템 리스트</h1>
