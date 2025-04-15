@@ -152,11 +152,7 @@ export default function Home() {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-1 rounded-full text-sm border ${
-              selectedCategory === cat
-                ? "bg-blue-500 text-white border-blue-500"
-                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700"
-            }`}
+            className={`whitespace-nowrap px-4 py-1 rounded-full text-sm border ${selectedCategory === cat ? "bg-blue-500 text-white border-blue-500" : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700"}`}
           >
             {cat}
           </button>
