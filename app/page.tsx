@@ -7,7 +7,64 @@ import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 
 const links = [
-  // ... 동일한 링크 목록 생략 ...
+  {
+    id: 1,
+    title: "룰루레몬 폼롤러 더블롤러",
+    description: "안소희가 사용한 폼롤러",
+    category: "운동용품",
+    url: "https://link.coupang.com/a/cn604A",
+    image: "/lululemon.jpg",
+  },
+   {
+    id: 2,
+    title: '브이라인 마사지기 관리밴드',
+    description: '레드벨벳 조이가 사용한 브이라인 마사지기',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/cn7FgH',
+    image: '/joy_ems.jpg',
+  },
+  {
+    id: 3,
+    title: '셀룰라 다이어트 자동롤러 마사지기',
+    description: '레드벨벳 조이가 사용한 자동롤러 마사지기',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/codmbh',
+    image: '/roller.jpg',
+  },
+  {
+    id: 4,
+    title: '이지스탭 프리미엄 자동소화 멀티탭 4구 2종',
+    description: '오연수 손지창 부부의 홈인테리어템',
+    category: '홈인테리어',
+    url: 'https://link.coupang.com/a/cowh5n',
+    image: '/multitab.jpg',
+  },
+  
+  
+  {
+    id: 5,
+    title: 'Norda 노다 002 여성 신더',
+    description: '레드벨벳 슬기의 등산화',
+    category: '운동용품',
+    url: 'https://link.coupang.com/a/coddTa',
+    image: '/seulgi.jpg',
+  },
+  {
+    id: 6,
+    title: '코이세이오 pomponne 038 solid perfume',
+    description: '슬기의 고체향수 선물 추천 템',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/coDiK6',
+    image: '/seulgi_perfume.jpg',
+  },
+  {
+    id: 7,
+    title: '진해양봉 생로얄제리',
+    description: '하지원이 먹은 건강관리 템',
+    category: '건강관리',
+    url: 'https://link.coupang.com/a/cob3Zs',
+    image: '/hajiwon.jpg',
+  },
 ];
 
 const categories = ["전체", "운동용품", '관리용품', '건강관리', '홈인테리어'];
