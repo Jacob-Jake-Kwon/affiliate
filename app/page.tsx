@@ -71,6 +71,14 @@ const links = [
     url: 'https://link.coupang.com/a/coMkEu',
     image: '/vitaminC.jpg',
   },
+  {
+    id: 9,
+    title: '꽃송이버섯 효소 발효현미버섯',
+    description: '한가인의 강력추천 소화효소',
+    category: '건강관리',
+    url: 'https://link.coupang.com/a/coMnDy',
+    image: '/hyunmi.jpg',
+  },
   
 ];
 
