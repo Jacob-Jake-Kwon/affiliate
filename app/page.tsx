@@ -39,8 +39,6 @@ const links = [
     url: 'https://link.coupang.com/a/cowh5n',
     image: '/multitab.jpg',
   },
-  
-  
   {
     id: 5,
     title: 'Norda 노다 002 여성 신더',
@@ -53,7 +51,7 @@ const links = [
     id: 6,
     title: '코이세이오 pomponne 038 solid perfume',
     description: '슬기의 고체향수 선물 추천 템',
-    category: '관리용품',
+    category: '뷰티',
     url: 'https://link.coupang.com/a/coDiK6',
     image: '/seulgi_perfume.jpg',
   },
@@ -65,9 +63,18 @@ const links = [
     url: 'https://link.coupang.com/a/cob3Zs',
     image: '/hajiwon.jpg',
   },
+  {
+    id: 8,
+    title: '리포스페릭 리포조말 비타민C 1000mg',
+    description: '채정안의 2025 영양제 비타민 C',
+    category: '건강관리',
+    url: 'https://link.coupang.com/a/coMkEu',
+    image: '/vitaminC.jpg',
+  },
+  
 ];
 
-const categories = ["전체", "운동용품", '관리용품', '건강관리', '홈인테리어'];
+const categories = ["전체", "운동용품", '관리용품', '건강관리', '뷰티', '홈인테리어'];
 
 export default function Home() {
   const [search, setSearch] = useState("");
