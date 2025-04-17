@@ -86,6 +86,13 @@ const links = [
     category: '뷰티',
     url: 'https://link.coupang.com/a/co7Y5H',
     image: '/tape.jpg',
+  },{
+    id: 11,
+    title: '나이키 러닝 슬림 웨이스트백 플립벨트 힙색 가방 허리색',
+    description: '이시영의 나이키 웨이스트백 힙색',
+    category: '운동용품',
+    url: 'https://link.coupang.com/a/co75Np',
+    image: '/hipsack.jpg',
   },
   
   
