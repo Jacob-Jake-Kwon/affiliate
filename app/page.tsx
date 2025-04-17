@@ -79,6 +79,15 @@ const links = [
     url: 'https://link.coupang.com/a/coMnDy',
     image: '/hyunmi.jpg',
   },
+  {
+    id: 10,
+    title: '이어밸런스 누운귀 테이프',
+    description: '오마이걸 미미의 누운귀 테이프',
+    category: '뷰티',
+    url: 'https://link.coupang.com/a/co7Y5H',
+    image: '/tape.jpg',
+  },
+  
   
 ];
 
