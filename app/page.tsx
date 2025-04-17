@@ -88,10 +88,10 @@ const links = [
     image: '/tape.jpg',
   },{
     id: 11,
-    title: '나이키 러닝 슬림 웨이스트백 플립벨트 힙색 가방 허리색',
+    title: '나이키 슬림 웨이스트백 3.0 리플렉터 플립벨트 러닝힙색',
     description: '이시영의 나이키 웨이스트백 힙색',
     category: '운동용품',
-    url: 'https://link.coupang.com/a/co75Np',
+    url: 'https://link.coupang.com/a/co77bK',
     image: '/hipsack.jpg',
   },
   
