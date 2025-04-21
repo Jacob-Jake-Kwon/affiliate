@@ -94,6 +94,14 @@ const links = [
     url: 'https://link.coupang.com/a/co77bK',
     image: '/hipsack.jpg',
   },
+  {
+    id: 11,
+    title: '샹떼클레어 저자극 섬유유연제 화이트머스크 본품',
+    description: '초아의 샹떼클레어 섬유유연제',
+    category: '홈인테리어',
+    url: 'https://link.coupang.com/a/cpIih6',
+    image: '/chanteclair.jpg',
+  },
   
   
 ];
