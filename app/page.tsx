@@ -7,6 +7,15 @@ import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 
 const links = [
+   {
+    id: 0,
+    title: "닥터아토 쿨링 선 스프레이 SPF50+ PA+++",
+    description: "안은진이 뿌리는 선스프레이",
+    category: "뷰티",
+    url: "https://link.coupang.com/a/cAt0xw",
+    image: "/sunspray.jpg",
+  },
+  
   {
     id: 1,
     title: "룰루레몬 폼롤러 더블롤러",
