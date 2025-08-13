@@ -171,7 +171,10 @@ export default function Home() {
     <main className="max-w-xl mx-auto p-4 space-y-6 pb-28">
       <div className="flex justify-between items-center">
         <div className="space-y-1">
-          <h1 className="text-2xl font-semibold">📌 연예인들의 꿀템 리스트</h1>
+          <h1 className="text-2xl font-semibold">
+             이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</h1>
+           <h1 className="text-2xl font-semibold">
+             📌 연예인들의 꿀템 리스트</h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">🤫연예인들의 추천템들만 모았어요</p>
         </div>
         <div className="flex space-x-2">
