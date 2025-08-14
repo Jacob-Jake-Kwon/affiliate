@@ -15,15 +15,17 @@ const links = [
     url: "https://link.coupang.com/a/cAt0xw",
     image: "/sunspray.jpg",
   },
-  
-  {
+   {
     id: 1,
-    title: "룰루레몬 폼롤러 더블롤러",
-    description: "안소희가 사용한 폼롤러",
-    category: "운동용품",
-    url: "https://link.coupang.com/a/cn604A",
-    image: "/lululemon.jpg",
+    title: "불맛나는 한나네 김",
+    description: "김수미가 극찬한 김!",
+    category: "음식",
+    url: "https://link.coupang.com/a/cKwgeb",
+    image: "/hannakim.jpg",
   },
+  
+  
+   
    {
     id: 2,
     title: '브이라인 마사지기 관리밴드',
@@ -111,11 +113,19 @@ const links = [
     url: 'https://link.coupang.com/a/cpIih6',
     image: '/chanteclair.jpg',
   },
+   {
+    id: 12,
+    title: "룰루레몬 폼롤러 더블롤러",
+    description: "안소희가 사용한 폼롤러",
+    category: "운동용품",
+    url: "https://link.coupang.com/a/cn604A",
+    image: "/lululemon.jpg",
+  },
   
   
 ];
 
-const categories = ["전체", "운동용품", '관리용품', '건강관리', '뷰티', '홈인테리어'];
+const categories = ["전체", "음식", "운동용품", '관리용품', '건강관리', '뷰티', '홈인테리어'];
 
 export default function Home() {
   const [search, setSearch] = useState("");
