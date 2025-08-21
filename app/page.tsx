@@ -23,17 +23,15 @@ const links = [
     url: "https://link.coupang.com/a/cKwgeb",
     image: "/hannakim.jpg",
   },
-  
-  
-   
-   {
+  {
     id: 2,
-    title: '브이라인 마사지기 관리밴드',
-    description: '레드벨벳 조이가 사용한 브이라인 마사지기',
+    title: '정품 리파 카사 M1 제니괄사',
+    description: '샤이니 키 괄사',
     category: '관리용품',
-    url: 'https://link.coupang.com/a/cn7FgH',
-    image: '/joy_ems.jpg',
+    url: 'https://link.coupang.com/a/cLWbgB',
+    image: '/key_gwalsa.jpg',
   },
+  
   {
     id: 3,
     title: '셀룰라 다이어트 자동롤러 마사지기',
@@ -120,6 +118,15 @@ const links = [
     category: "운동용품",
     url: "https://link.coupang.com/a/cn604A",
     image: "/lululemon.jpg",
+  },
+   
+   {
+    id: 13,
+    title: '브이라인 마사지기 관리밴드',
+    description: '레드벨벳 조이가 사용한 브이라인 마사지기',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/cn7FgH',
+    image: '/joy_ems.jpg',
   },
   
   
