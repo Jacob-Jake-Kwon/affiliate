@@ -25,11 +25,13 @@ const links = [
   },
   {
     id: 2,
-    title: '정품 리파 카사 M1 제니괄사',
-    description: '샤이니 키 괄사',
+    title: '어뮤즈 에어리 스팟 컨실러 팔레트',
+    description: '후니언의 컨실러 맛집 신상템',
     category: '관리용품',
-    url: 'https://link.coupang.com/a/cLWbgB',
-    image: '/key_gwalsa.jpg',
+    url: 'https://link.coupang.com/a/cMKy2s',
+    image: '/amuse_airy.jpg',
+   
+    
   },
   
   {
@@ -128,6 +130,14 @@ const links = [
     url: 'https://link.coupang.com/a/cn7FgH',
     image: '/joy_ems.jpg',
   },
+   {
+      id: 14,
+    title: '정품 리파 카사 M1 제니괄사',
+    description: '샤이니 키 괄사',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/cLWbgB',
+    image: '/key_gwalsa.jpg',
+   }
   
   
 ];
