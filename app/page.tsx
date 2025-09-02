@@ -23,16 +23,17 @@ const links = [
     url: "https://link.coupang.com/a/cKwgeb",
     image: "/hannakim.jpg",
   },
-  {
+    {
     id: 2,
-    title: '어뮤즈 에어리 스팟 컨실러 팔레트',
-    description: '후니언의 컨실러 맛집 신상템',
+    title: '쿠팡 1위템 풋샴푸',
+    description: '온더바디 발을씻자 코튼 풋샴푸 레몬민트향',
     category: '관리용품',
-    url: 'https://link.coupang.com/a/cMKy2s',
-    image: '/amuse_airy.jpg',
+    url: 'https://link.coupang.com/a/cOlgiC',
+    image: '/FootShampoo.png',
    
     
   },
+  
   
   {
     id: 3,
@@ -137,7 +138,17 @@ const links = [
     category: '관리용품',
     url: 'https://link.coupang.com/a/cLWbgB',
     image: '/key_gwalsa.jpg',
-   }
+   },
+   {
+    id: 15,
+    title: '어뮤즈 에어리 스팟 컨실러 팔레트',
+    description: '후니언의 컨실러 맛집 신상템',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/cMKy2s',
+    image: '/amuse_airy.jpg',
+   
+    
+  },
   
   
 ];
