@@ -17,11 +17,11 @@ const links = [
   },
    {
     id: 1,
-    title: "불맛나는 한나네 김",
-    description: "김수미가 극찬한 김!",
-    category: "음식",
-    url: "https://link.coupang.com/a/cKwgeb",
-    image: "/hannakim.jpg",
+    title: "행운의 강아지 키링",
+    description: "커플템 추천",
+    category: "악세서리",
+    url: "https://link.coupang.com/a/cO2j4G",
+    image: "/LuckyDog.png",
   },
     {
     id: 2,
@@ -30,8 +30,6 @@ const links = [
     category: '관리용품',
     url: 'https://link.coupang.com/a/cOlgiC',
     image: '/FootShampoo.png',
-   
-    
   },
   
   
@@ -149,11 +147,19 @@ const links = [
    
     
   },
+   {
+    id: 16,
+    title: "불맛나는 한나네 김",
+    description: "김수미가 극찬한 김!",
+    category: "음식",
+    url: "https://link.coupang.com/a/cKwgeb",
+    image: "/hannakim.jpg",
+  }
   
   
 ];
 
-const categories = ["전체", "음식", "운동용품", '관리용품', '건강관리', '뷰티', '홈인테리어'];
+const categories = ["전체", "악세서리", "음식", "운동용품", '관리용품', '건강관리', '뷰티', '홈인테리어'];
 
 export default function Home() {
   const [search, setSearch] = useState("");
