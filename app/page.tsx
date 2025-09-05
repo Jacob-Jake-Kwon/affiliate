@@ -23,13 +23,14 @@ const links = [
     url: "https://link.coupang.com/a/cO2j4G",
     image: "/LuckyDog.png",
   },
+   
     {
     id: 2,
-    title: '쿠팡 1위템 풋샴푸',
-    description: '온더바디 발을씻자 코튼 풋샴푸 레몬민트향',
-    category: '관리용품',
-    url: 'https://link.coupang.com/a/cOlgiC',
-    image: '/FootShampoo.png',
+    title: '건강하고 맛있는 브로콜리 주스',
+    description: '슬기의 강력 추천 주스!',
+    category: '음식',
+    url: 'https://link.coupang.com/a/cO2l6s',
+    image: '/Brocolli.png',
   },
   
   
@@ -154,8 +155,15 @@ const links = [
     category: "음식",
     url: "https://link.coupang.com/a/cKwgeb",
     image: "/hannakim.jpg",
+  },
+  {
+    id: 17,
+    title: '쿠팡 1위템 풋샴푸',
+    description: '온더바디 발을씻자 코튼 풋샴푸 레몬민트향',
+    category: '관리용품',
+    url: 'https://link.coupang.com/a/cOlgiC',
+    image: '/FootShampoo.png',
   }
-  
   
 ];
 
