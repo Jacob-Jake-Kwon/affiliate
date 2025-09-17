@@ -23,15 +23,15 @@ const links = [
     url: "https://link.coupang.com/a/cO2j4G",
     image: "/LuckyDog.png",
   },
-   
-    {
+   {
     id: 2,
-    title: '건강하고 맛있는 브로콜리 주스',
-    description: '슬기의 강력 추천 주스!',
-    category: '음식',
-    url: 'https://link.coupang.com/a/cO2l6s',
-    image: '/Brocolli.png',
+    title: "소프트립스 립밤",
+    description: "이재용 립밤",
+    category: "뷰티",
+    url: "https://link.coupang.com/a/cRxxrs",
+    image: "/lipbalm.jpg",
   },
+    
   
   
   {
@@ -163,6 +163,14 @@ const links = [
     category: '관리용품',
     url: 'https://link.coupang.com/a/cOlgiC',
     image: '/FootShampoo.png',
+  },
+   {
+    id: 18,
+    title: '건강하고 맛있는 브로콜리 주스',
+    description: '슬기의 강력 추천 주스!',
+    category: '음식',
+    url: 'https://link.coupang.com/a/cO2l6s',
+    image: '/Brocolli.png',
   }
   
 ];
