@@ -20,7 +20,7 @@ const links = [
     description: "이재용 립밤",
     category: "뷰티",
     url: "https://link.coupang.com/a/cRxxrs",
-    image: "/lipbalm.jpg",
+    image: "/lipbalm.png",
   },
    {
     id: 2,
