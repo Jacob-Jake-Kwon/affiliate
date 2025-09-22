@@ -16,24 +16,20 @@ const links = [
     image: "/sunspray.jpg",
   },{
     id: 1,
+    title: "로에베 아이레 수틸레사 오드뚜왈렛",
+    description: "프로미스나인 인생 향수",
+    category: "뷰티",
+    url: "https://link.coupang.com/a/cSmijY",
+    image: "/fromis_frag.png",
+  },
+   {
+    id: 2,
     title: "소프트립스 립밤",
     description: "이재용 립밤",
     category: "뷰티",
     url: "https://link.coupang.com/a/cRxxrs",
     image: "/lipbalm.png",
   },
-   {
-    id: 2,
-    title: "행운의 강아지 키링",
-    description: "커플템 추천",
-    category: "악세서리",
-    url: "https://link.coupang.com/a/cO2j4G",
-    image: "/LuckyDog.png",
-  },
-   
-    
-  
-  
   {
     id: 3,
     title: '셀룰라 다이어트 자동롤러 마사지기',
@@ -171,6 +167,13 @@ const links = [
     category: '음식',
     url: 'https://link.coupang.com/a/cO2l6s',
     image: '/Brocolli.png',
+  },{
+    id: 19,
+    title: "행운의 강아지 키링",
+    description: "커플템 추천",
+    category: "악세서리",
+    url: "https://link.coupang.com/a/cO2j4G",
+    image: "/LuckyDog.png",
   }
   
 ];
